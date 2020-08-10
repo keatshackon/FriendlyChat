@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_gradient">
+
+    <ListView
+        android:id="@+id/messageListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_margin="5dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="5dp"
+        android:divider="@android:color/transparent"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/item_message" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:weightSum="100"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:background="@drawable/shape">
+
+        <ImageButton
+            android:id="@+id/photoPickerButton"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="49dp"
+            android:paddingStart="3dp"
+            android:layout_marginEnd="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="6dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:background="@drawable/shapemessage2"
+            android:contentDescription="@string/todo" />
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="70"
+            android:autofillHints=""
+            android:clickable="true"
+            android:focusable="true"
+            android:textColorHint="#FFCDCACA"
+            android:layout_marginStart="2dp"
+            android:maxLines="10"
+            android:maxLength="100"
+            android:padding="12dp"
+            android:background="@drawable/shapemessage1"
+            android:hint="@string/type_a_query"
+            android:inputType="text"
+            android:isScrollContainer="true"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="0dp"
+            android:layout_weight="18"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:enabled="true"
+            android:text="@string/send_button_label"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/shapemessage"
+            android:textColor="#FFCDCACA"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

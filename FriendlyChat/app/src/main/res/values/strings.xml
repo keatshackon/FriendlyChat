@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FriendlyChat</string>
+    <string name="send_button_label">Send</string>
+    <string name="todo">TODO</string>
+    <string name="sign_out">SignOut</string>
+    <string name="type_a_query">type a message</string>
+    <string name="_12_15_01_01">-12:15-01/01</string>
+    <string name="inetnet">Internet Is Required For This Application</string>
+    <string name="cancel" />
+    <string name="please" />
+</resources>
